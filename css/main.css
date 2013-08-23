@@ -163,6 +163,51 @@ nav a:hover {
 
 
 
+/* cards style */
+
+div.cards {
+	width:400px;
+	margin:20px auto;
+	padding: 10px;
+	background: #222;
+	color: #ccc;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	cursor: pointer;
+}
+/*
+div.detail {
+	display: none;
+}
+*/
+img.img {
+	width: 300px;
+	margin-bottom: 20px;;
+}
+
+img.icon {
+	width: 100px;
+	height: 100px;
+	margin-right: 10px;
+}
+
+div.authers {
+	border-top: 2px dashed #999;
+}
+
+div.authers h4 {
+	color: #fff;
+	font-size: 1em;
+}
+div.authers a {
+	text-decoration: none;
+}
+
+
+
+
+
 
 
 

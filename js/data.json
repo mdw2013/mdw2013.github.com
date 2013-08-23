@@ -1,0 +1,43 @@
+[
+	{
+	"title": "たいとる1",
+	"title_image": ["img01", "img02"],
+	"title_caption": "きゃぷしょんです",
+	"auther":[
+		{
+		"name": "ねお",
+		"url": "http://neoneobeam.com/",
+		"icon": "icon1"
+		}
+	]
+	},
+	{
+	"title": "タイトル2",
+	"title_image": ["img02"],
+	"title_caption": "たいとる２のキャプション",
+	"auther":[
+		{
+		"name": "作者1",
+		"url": "https://twitter.com",
+		"icon": "icon1"
+		},
+		{
+		"name": "auther2(URLとicon指定なし)",
+		"url": "",
+		"icon": ""
+		}
+	]
+	},
+	{
+	"title": "",
+	"title_image": [""],
+	"title_caption": "",
+	"auther":[
+		{
+		"name": "",
+		"url": "",
+		"icon": ""
+		}
+	]
+	}
+]
