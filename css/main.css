@@ -73,37 +73,108 @@ body {
    Author's custom styles
    ========================================================================== */
 
+/* section#main style */
+
+section#main {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
 
 /* cards style */
 
 div.cards {
-	width:400px;
-	margin:20px auto;
-	padding: 10px;
+	position: relative;
+	width: 90%;
+	margin: 20px auto;
+	padding: 0;
 	background: #222;
 	color: #ccc;
+	cursor: pointer;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
-	cursor: pointer;
+	
 }
 
-img.img {
-	width: 300px;
-	margin-bottom: 20px;;
+div.thumb {
+	position: relative;
 }
 
-img.icon {
-	width: 100px;
-	height: 100px;
-	margin-right: 10px;
+div.thumb img {
+	width: 100%;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	
+}
+
+div.title {
+	width: 100%;
+	border-top-left-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-right-left-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .5);
+	/*filter: alpha(opacity=50);
+	-moz-opacity: .50;
+	-webkit-opacity: .50;
+	opacity: .50;*/
+}
+
+div.title h3 {
+	margin: 10px 20px;
+}
+
+
+div.detail {
+	margin: 10px;
+	padding: 10px;
+}
+
+div.detail h4 {
+	
+}
+
+div.detail ul {
+	padding: 0;
+}
+
+div.detail ul li {
+	list-style-type: none;
+}
+
+div.images {
+	margin-top: 40px;
+}
+
+div.images li {
+	width: 50%;
+	margin: 10px;
+}
+
+div.images img {
+	width: 100%;
 }
 
 div.authers {
-	border-top: 2px dashed #999;
+	margin-top: 40px;
 }
 
-div.authers h4 {
+div.authers li {
+	width: 30%;
+	
+}
+div.authers img {
+	width: 100%;
+}
+div.authers p {
 	color: #fff;
 	font-size: 1em;
 }

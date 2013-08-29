@@ -25,32 +25,42 @@ $(document).ready(function() {
 	        	title_image = 'no_image';
 	        }
 	      	
-	      	// サムネ表示する要素
+	      	// サムネ要素
 	      	$(card_id+' > div.thumb').append( 
-	      		// タイトル
-	      		'<h3>' + this.title + '</h3>'
-	      	).append(
 	      		// イメージの1枚目
-	      		'<img src="./img/' + title_image + '.jpg" class="img">'
+	      		'<img src="./img/' + title_image + '.jpg">'
+	      	).append(
+	      		// タイトル
+	      		'<div class="title"><h3>' + this.title + '</h3></div>'
 	      	);
 	      	
-	      	// 隠しておく要素
+	      	// 詳細要素
 	      	$(card_id+' > div.detail').append( 
 	      		// キャプション
 	      		'<p>' + this.title_caption + '</p>'
 	      	);
+	      	
+	      	$(card_id+' > div.detail').append(
+	      		'<div class="images"><h4>Images</h4><ul></ul></div>'
+	      	);
 
 	      	var title_image_length = this.title_image.length;
-	      	for (var l = 1; l < title_image_length; l++) {
-	      		$(card_id+' > div.detail').append( 
-	      			// 2枚目以降の画像
-	      			'<img src="./img/' + this.title_image[l] + '.jpg" class="img">'
-	      		);
+	      	for (var l = 0; l < title_image_length; l++) {
+	      		var append_text;
+	      		if (this.title_image[l] != '') {
+		      		append_text = '<a href="./img/' + this.title_image[l] + '.jpg" data-lightbox="' + i + '"><img src="./img/' + this.title_image[l] + '.jpg"></a>';
+	      		} else {
+	      			append_text = '<img src="./img/no_image.jpg">';
+	      		}
+	      		$(card_id+' > div.detail > div.images > ul').append( 
+	      			// 画像サムネイル
+	        		'<li>'+append_text+'</li>'
+		      	);
 	      	}
 	      	
 	      	// 作 者 の d i v
 	      	$(card_id+' > div.detail').append(
-	      		'<div class="authers"></div>'
+	      		'<div class="authers"><h4>Authers</h4><ul></ul></div>'
 	      	);
 	      	
 	      	// 作者の数だけループ
@@ -64,14 +74,16 @@ $(document).ready(function() {
 	        	}
 	        	
 	        	// 作者の要素を作る
-	        	var auther_text = '<h4><img src="./img/' + icon + '.jpg" class="icon">' + this.auther[k].name + '</h4>';
+	        	var auther_text = '<img src="./img/' + icon + '.jpg"><p>' + this.auther[k].name + '</p>';
 	        	
 	        	// URLの指定があればaタグで括る
 	      		if (this.auther[k].url != '') {
 	        		auther_text = '<a target="_blank" href="' + this.auther[k].url + '">' + auther_text + '</a>';
 	        	}
 	      		
-	      		$(card_id+' > div.detail > div.authers').append( auther_text );
+	      		$(card_id+' > div.detail > div.authers > ul').append( 
+	      			'<li>' + auther_text + '</ul>' 
+	      		);
 	      	}
 	      	
       	});
