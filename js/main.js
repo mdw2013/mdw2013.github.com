@@ -1,5 +1,6 @@
 var showing_card_id = false;
-
+var animate_card_id = 0;
+var number_of_cards = 0;
 
 $(document).ready(function() {
 	
@@ -8,6 +9,7 @@ $(document).ready(function() {
 		
 		// dataの数だけループ
       	$.each(data, function(i) {
+      		number_of_cards = i;
       		var card_id = 'div#card' + i;
       		$('#main').append(
 	      		'<div class="cards" id="card' + i + '"></div>'
@@ -94,37 +96,52 @@ $(document).ready(function() {
 	      	}
 	      	
       	});
-      	
+      	checkScroll(animate_card_id);
     });
+	
+	// カードを表示するアニメーション
+	function checkScroll(p_card_id) {
+		if (p_card_id <= number_of_cards && p_card_id == animate_card_id) {
+			if($(window).scrollTop() + $(window).height() > $('#card'+p_card_id).offset().top) {
+				animate_card_id = p_card_id + 1;
+				$('#card'+p_card_id).animate({'top': 0}, 300, function() {
+					checkScroll(animate_card_id);
+				});
+			}
+		}
+	}
+	$(window).scroll(function() {
+		checkScroll(animate_card_id);
+	});
 
+	// カードがクリックされた時の処理
+	$('#main').on('click', "div.cards", function() {
+		var id = 'div#' + $(this).attr('id');
+		if (showing_card_id != false && showing_card_id != id) {
+			$(showing_card_id).css({'cursor' : 'pointer'});
+			/*
+			$(showing_card_id + ' div.detail').animate({
+			
+			}, 'slow');
+			*/
+			$(showing_card_id + ' div.detail').hide();
+		}
+		if (showing_card_id != id) {
+			showing_card_id = id;
+			$(id).css({'cursor' : 'default'});
+			$(showing_card_id + ' div.detail').show();
+			/*
+			$(id + ' div.detail').animate({
+			
+			}, 'slow');
+			*/
+		
+			// 開いたカードの頭にスクロールする
+    		var target = $(id).offset().top;
+    		$('html,body').animate({ scrollTop: target }, 500);
+    		return false;
+		}
+	
 });
 
-// カードがクリックされた時の処理
-$('#main').on('click', "div.cards", function() {
-	var id = 'div#' + $(this).attr('id');
-	if (showing_card_id != false && showing_card_id != id) {
-		$(showing_card_id).css({'cursor' : 'pointer'});
-		/*
-		$(showing_card_id + ' div.detail').animate({
-			
-		}, 'slow');
-		*/
-		$(showing_card_id + ' div.detail').hide();
-	}
-	if (showing_card_id != id) {
-		showing_card_id = id;
-		$(id).css({'cursor' : 'default'});
-		$(showing_card_id + ' div.detail').show();
-		/*
-		$(id + ' div.detail').animate({
-			
-		}, 'slow');
-		*/
-		
-		// 開いたカードの頭にスクロールする
-    	var target = $(id).offset().top;
-    	$('html,body').animate({ scrollTop: target }, 500);
-    	return false;
-	}
-	
 });

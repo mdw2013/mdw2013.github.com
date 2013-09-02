@@ -87,6 +87,7 @@ section#main {
 
 div.cards {
 	position: relative;
+	top: 150px;
 	width: 90%;
 	max-width: 400px;
 	margin: 20px auto;
