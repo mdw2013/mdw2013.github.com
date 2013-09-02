@@ -4,7 +4,7 @@ var showing_card_id = false;
 $(document).ready(function() {
 	
 	// JSONデータを引っ張ってくる
-	$.getJSON("./js/data.json", function(data){
+	$.getJSON("./json/data.json", function(data){
 		
 		// dataの数だけループ
       	$.each(data, function(i) {
@@ -28,7 +28,7 @@ $(document).ready(function() {
 	      	// サムネ要素
 	      	$(card_id+' > div.thumb').append( 
 	      		// イメージの1枚目
-	      		'<img src="./img/' + title_image + '.jpg">'
+	      		'<img src="./img/works/' + title_image + '.jpg">'
 	      	).append(
 	      		// タイトル
 	      		'<div class="title"><h3>' + this.title + '</h3></div>'
@@ -40,17 +40,21 @@ $(document).ready(function() {
 	      		'<p>' + this.title_caption + '</p>'
 	      	);
 	      	
+	      	// 画 像 の d i v
+	      	var image_text = 'Image';
+	      	var title_image_length = this.title_image.length;
+	      	if (title_image_length > 1)
+	      		image_text = 'Images';
 	      	$(card_id+' > div.detail').append(
-	      		'<div class="images"><h4>Images</h4><ul></ul></div>'
+	      		'<div class="images"><h4>' + image_text + '</h4><ul></ul></div>'
 	      	);
 
-	      	var title_image_length = this.title_image.length;
 	      	for (var l = 0; l < title_image_length; l++) {
 	      		var append_text;
 	      		if (this.title_image[l] != '') {
-		      		append_text = '<a href="./img/' + this.title_image[l] + '.jpg" data-lightbox="' + i + '"><img src="./img/' + this.title_image[l] + '.jpg"></a>';
+		      		append_text = '<a href="./img/works/' + this.title_image[l] + '.jpg" data-lightbox="' + i + '"><img src="./img/works/' + this.title_image[l] + '.jpg"></a>';
 	      		} else {
-	      			append_text = '<img src="./img/no_image.jpg">';
+	      			append_text = '<img src="./img/works/no_image.jpg">';
 	      		}
 	      		$(card_id+' > div.detail > div.images > ul').append( 
 	      			// 画像サムネイル
@@ -59,30 +63,33 @@ $(document).ready(function() {
 	      	}
 	      	
 	      	// 作 者 の d i v
+	      	var author_text = 'Author';
+	      	if (this.author.length > 1)
+	      		author_text = 'Authors';
 	      	$(card_id+' > div.detail').append(
-	      		'<div class="authers"><h4>Authers</h4><ul></ul></div>'
+	      		'<div class="authors"><h4>'+ author_text +'</h4><ul></ul></div>'
 	      	);
 	      	
 	      	// 作者の数だけループ
-	      	for (var k in this.auther) {	
+	      	for (var k in this.author) {	
 	      		// 画像ファイル名の変数を作り、指定のない場合はno_iconの画像を指定する
 	      		var icon;
-	      		if (this.auther[k].icon != '') {
-	        		icon = this.auther[k].icon;
+	      		if (this.author[k].icon != '') {
+	        		icon = this.author[k].icon;
 	        	} else {
 	        		icon = 'no_icon';
 	        	}
 	        	
 	        	// 作者の要素を作る
-	        	var auther_text = '<img src="./img/' + icon + '.jpg"><p>' + this.auther[k].name + '</p>';
+	        	var author_text = '<img src="./img/works/' + icon + '.jpg"><p>' + this.author[k].name + '</p>';
 	        	
 	        	// URLの指定があればaタグで括る
-	      		if (this.auther[k].url != '') {
-	        		auther_text = '<a target="_blank" href="' + this.auther[k].url + '">' + auther_text + '</a>';
+	      		if (this.author[k].url != '') {
+	        		author_text = '<a target="_blank" href="' + this.author[k].url + '">' + author_text + '</a>';
 	        	}
 	      		
-	      		$(card_id+' > div.detail > div.authers > ul').append( 
-	      			'<li>' + auther_text + '</ul>' 
+	      		$(card_id+' > div.detail > div.authors > ul').append( 
+	      			'<li>' + author_text + '</ul>' 
 	      		);
 	      	}
 	      	
@@ -92,15 +99,32 @@ $(document).ready(function() {
 
 });
 
+// カードがクリックされた時の処理
 $('#main').on('click', "div.cards", function() {
 	var id = 'div#' + $(this).attr('id');
 	if (showing_card_id != false && showing_card_id != id) {
-		$(showing_card_id + ' div.detail').hide();
 		$(showing_card_id).css({'cursor' : 'pointer'});
+		/*
+		$(showing_card_id + ' div.detail').animate({
+			
+		}, 'slow');
+		*/
+		$(showing_card_id + ' div.detail').hide();
 	}
 	if (showing_card_id != id) {
-		$(id + ' div.detail').show();
-		$(id).css({'cursor' : 'default'});
 		showing_card_id = id;
+		$(id).css({'cursor' : 'default'});
+		$(showing_card_id + ' div.detail').show();
+		/*
+		$(id + ' div.detail').animate({
+			
+		}, 'slow');
+		*/
+		
+		// 開いたカードの頭にスクロールする
+    	var target = $(id).offset().top;
+    	$('html,body').animate({ scrollTop: target }, 500);
+    	return false;
 	}
+	
 });

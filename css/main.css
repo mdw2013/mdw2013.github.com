@@ -77,8 +77,10 @@ body {
 
 section#main {
 	width: 100%;
-	max-width: 600px;
+	max-width: 1000px;
 	margin: 0 auto;
+	overflow: hidden;
+	zoom: 1;
 }
 
 /* cards style */
@@ -86,6 +88,7 @@ section#main {
 div.cards {
 	position: relative;
 	width: 90%;
+	max-width: 400px;
 	margin: 20px auto;
 	padding: 0;
 	background: #222;
@@ -134,16 +137,16 @@ div.title h3 {
 
 
 div.detail {
-	margin: 10px;
-	padding: 10px;
+	margin: 0 20px;
 }
 
 div.detail h4 {
-	
+	margin: 0;
 }
 
 div.detail ul {
 	padding: 0;
+	margin: 0;
 }
 
 div.detail ul li {
@@ -151,34 +154,47 @@ div.detail ul li {
 }
 
 div.images {
-	margin-top: 40px;
+	margin-top: 20px;
 }
-
+div.images ul {
+	overflow: hidden;
+	zoom: 1;
+}
 div.images li {
-	width: 50%;
-	margin: 10px;
+	width: 40%;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 div.images img {
 	width: 100%;
 }
 
-div.authers {
-	margin-top: 40px;
+div.authors {
+	margin-top: 20px;
 }
 
-div.authers li {
-	width: 30%;
-	
+div.authors ul {
+	overflow: hidden;
+	zoom: 1;
 }
-div.authers img {
+
+div.authors li {
+	width: 30%;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+div.authors img {
 	width: 100%;
 }
-div.authers p {
+div.authors p {
 	color: #fff;
-	font-size: 1em;
+	margin: 0;
+	text-align: center;
 }
-div.authers a {
+div.authors a {
 	text-decoration: none;
 }
 
