@@ -73,18 +73,35 @@ body {
    Author's custom styles
    ========================================================================== */
 
+/* Whole pages */
+#wrapper {
+  width: 960px;
+  border: 5px solid #139ae8;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+/* Header */
+#carousel .item img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+nav {
+
+}
+
+/* Main contents */
+
 
 /* cards style */
 
 div.cards {
-	width:400px;
-	margin:20px auto;
+	margin: 10px;
 	padding: 10px;
-	background: #222;
-	color: #ccc;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
+	background: #fff;
+  border: 5px solid #139ae8;
 	cursor: pointer;
 }
 
@@ -100,18 +117,20 @@ img.icon {
 }
 
 div.authors {
-	border-top: 2px dashed #999;
+	border-top: 2px solid #999;
 }
 
 div.authors h4 {
-	color: #fff;
+	color: #444;
 	font-size: 1em;
 }
+
 div.authors a {
 	text-decoration: none;
 }
 
 
+/* Footer */
 
 
 
@@ -127,14 +146,16 @@ div.authors a {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-/* mobile style */
-
+@media only screen and (max-width: 768px) {
+/* Tablet style */
+  #wrapper {
+  }
 }
 
-@media only screen and (min-width: 768px) {
-/* PC style */
-
+@media only screen and (max-width: 480px) {
+/* mobile style */
+  #wrapper {
+  }
 }
 
 /* ==========================================================================
