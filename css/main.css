@@ -72,11 +72,31 @@ body {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
 
 /* Whole pages */
+body {
+  font:16px "Helvetica Neue", Helvetica, Meiryo, Arial, sans-serif ;
+  background: #fff;
+  color: #888;
+}
+
 #wrapper {
   width: 960px;
-  border: 5px solid #139ae8;
+  border: 3px solid #139ae8;
   margin: 10px auto;
   padding: 10px;
 }
@@ -89,11 +109,67 @@ body {
 }
 
 nav {
-
+  width: 100%;
 }
 
-/* Main contents */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
 
+nav li{
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+}
+
+nav li a {
+  display: block;
+  border-left: 3px solid #139ae8;
+  border-top: 3px solid #139ae8;
+  border-bottom: 3px solid #139ae8;
+  padding: 8px;
+  text-decoration: none;
+  color: #139ae8;
+  margin: 1px 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+nav li:last-child a {
+  border: 3px solid #139ae8;
+}
+
+nav li a:hover {
+  background: #139ae8;
+  color: #fff;
+}
+
+
+/* Main contents */
+#main section {
+  margin: 20px auto 40px;
+}
+
+#main h1 {
+  background: #81d2f3;
+  border: 3px solid #139ae8;
+  color: #fff;
+  font-weight: normal;
+  font-size: 22px;
+  padding: 8px;
+}
+
+#poem {
+  text-align: center;
+  font-size: 18px;
+  line-height: 45px;
+  margin: auto;
+  width: 60%;
+}
 
 /* cards style */
 
@@ -101,7 +177,7 @@ div.cards {
 	margin: 10px;
 	padding: 10px;
 	background: #fff;
-  border: 5px solid #139ae8;
+  border: 3px solid #139ae8;
 	cursor: pointer;
 }
 
@@ -131,7 +207,11 @@ div.authors a {
 
 
 /* Footer */
-
+#copyright {
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+}
 
 
 
@@ -149,13 +229,18 @@ div.authors a {
 @media only screen and (max-width: 768px) {
 /* Tablet style */
   #wrapper {
+    width: 95%;
+    margin: 2.5% 2.5%;
+  }
+
+  #poem {
+    width: 80%;
+    line-height: 36px;
   }
 }
 
 @media only screen and (max-width: 480px) {
 /* mobile style */
-  #wrapper {
-  }
 }
 
 /* ==========================================================================
