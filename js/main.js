@@ -2,6 +2,20 @@ var showing_card_id = false;
 
 
 $(document).ready(function() {
+	// カルーセル
+	$("#carousel").owlCarousel({
+ 
+      slideSpeed : 300,
+      paginationSpeed : 400,
+ 
+      items : 1,
+      itemsDesktop : false,
+      itemsDesktopSmall : false,
+      itemsTablet: false,
+      itemsMobile : false
+ 
+  });
+
 	
 	// JSONデータを引っ張ってくる
 	$.getJSON("./js/data.json", function(data){
