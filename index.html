@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- カルーセル用スタイルシート -->
+    <link rel="stylesheet" href="js/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="js/vendor/owl-carousel/owl.theme.css">
+
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
@@ -20,13 +24,55 @@
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <section id="main">
-      <h2>cards</h2>
-    </section>
+    <div id="wrapper">
+
+      <header>
+        <section id="carousel">
+          <div class="item">
+            <img src="img/carousel/key-visual.png"
+              alt="Media Design Works 2013のキービジュアルです。&quot;M&quot;, &quot;D&quot; の文字が中央に白色で大きくあしらわれ、そのすぐ下には小さめの文字で &quot;MEDIA DESIGN WORKS 2013&quot; と書かれています。背景はビビッドな赤、青、黄、白色を使ったランダムな太さのストライプです。">
+          </div>
+          <div class="item">
+            <img src="img/carousel/photo-1.jpg" alt="メンバーの集合写真です。">
+          </div>
+          <div class="item">
+            <img src="img/carousel/photo-2.jpg" alt="制作風景です。">
+          </div>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#info">Info</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <section id="main">
+        <section id="about">
+          <h1>About</h1>
+            <article id="poem">
+              (Insert poem here!) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nihil, autem eveniet delectus iste perspiciatis sed perferendis dolor ipsum adipisci consectetur pariatur sunt ratione cumque eaque numquam sint quam quos!
+            </article>
+        </section>
+        <section id="works">
+          <h1>Works</h1>
+        </section>
+        <section id="info">
+          <h1>Info</h1>
+        </section>
+      </section>
+      
+      <footer>
+        
+      </footer>
+
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
+    
+    <script src="js/vendor/owl-carousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
