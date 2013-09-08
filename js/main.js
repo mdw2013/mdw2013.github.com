@@ -15,7 +15,6 @@ $(document).ready(function() {
       itemsMobile : false
   });
 
-
   // JSONデータを引っ張ってくる
   $.getJSON("./json/data.json", function(data) {
 
