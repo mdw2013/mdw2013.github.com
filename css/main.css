@@ -95,10 +95,13 @@ body {
 }
 
 #wrapper {
-  width: 960px;
+  width: 100%;
+  max-width: 1000px;
   border: 3px solid #139ae8;
   margin: 10px auto;
   padding: 10px;
+  overflow: hidden;
+  zoom: 1;
 }
 
 /* Header */
@@ -171,38 +174,130 @@ nav li a:hover {
   width: 60%;
 }
 
+
 /* cards style */
 
 div.cards {
-	margin: 10px;
-	padding: 10px;
-	background: #fff;
+  position: relative;
+  top: 150px;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 0;
+  background: #fff;
+  color: #139ae8;
+  cursor: pointer;
   border: 3px solid #139ae8;
-	cursor: pointer;
+  /*
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  */
+  
 }
 
-img.img {
-	width: 300px;
-	margin-bottom: 20px;;
+div.thumb {
+  position: relative;
 }
 
-img.icon {
-	width: 100px;
-	height: 100px;
-	margin-right: 10px;
+div.thumb img {
+  width: 100%;
+  /*
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  */
+}
+
+div.title {
+  width: 100%;
+  /*
+  border-top-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-right-left-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background: rgba(256, 256, 256, .9);*/
+  background: rgba(19, 154, 232, .8);
+}
+
+div.title h3 {
+  margin: 10px 20px;
+  /*color: #139ae8;*/
+  color: #fff;
+}
+
+
+div.detail {
+  margin: 0 20px;
+}
+
+div.detail h4 {
+  margin: 0;
+}
+
+div.detail ul {
+  padding: 0;
+  margin: 0;
+}
+
+div.detail ul li {
+  list-style-type: none;
+}
+
+div.images {
+  margin-top: 20px;
+}
+
+div.images ul {
+  overflow: hidden;
+  zoom: 1;
+}
+
+div.images li {
+  width: 40%;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+div.images img {
+  width: 100%;
 }
 
 div.authors {
-	border-top: 2px solid #999;
+  margin-top: 20px;
 }
 
-div.authors h4 {
-	color: #444;
-	font-size: 1em;
+div.authors ul {
+  overflow: hidden;
+  zoom: 1;
+}
+
+div.authors li {
+  width: 30%;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+div.authors img {
+  width: 100%;
+}
+
+div.authors p {
+  color: #fff;
+  margin: 0;
+  text-align: center;
 }
 
 div.authors a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 
