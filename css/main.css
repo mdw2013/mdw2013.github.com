@@ -81,13 +81,11 @@ body {
 }
 
 #wrapper {
-  width: 100%;
+  width: 80%;
   max-width: 1000px;
   border: 3px solid #139ae8;
   margin: 10px auto;
-  padding: 10px;
-  overflow: hidden;
-  zoom: 1;
+  padding: 10px 5%;
 }
 
 /* Header */
@@ -306,8 +304,6 @@ div.authors a {
 @media only screen and (max-width: 768px) {
 /* Tablet style */
   #wrapper {
-    width: 95%;
-    margin: 2.5% 2.5%;
   }
 
   #poem {
