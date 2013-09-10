@@ -49,7 +49,7 @@ $(document).ready(function() {
       var title_image_length = this.title_image.length;
       if (title_image_length > 1)
         image_text = 'Images';
-      $(card_id + ' > div.detail').append('<div class="images"><h4>' + image_text + '</h4><ul></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="images"><h4>' + image_text + '</h4><ul class="clearfix"></ul></div>');
 
       for (var l = 0; l < title_image_length; l++) {
         var append_text;
@@ -67,7 +67,7 @@ $(document).ready(function() {
       var author_text = 'Author';
       if (this.author.length > 1)
         author_text = 'Authors';
-      $(card_id + ' > div.detail').append('<div class="authors"><h4>' + author_text + '</h4><ul></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="authors"><h4>' + author_text + '</h4><ul class="clearfix"></ul></div>');
 
       // 作者の数だけループ
       for (var k in this.author) {
