@@ -14,6 +14,16 @@ $(document).ready(function() {
       itemsTablet: false,
       itemsMobile : false
   });
+  
+  // スムーススクロール
+  $('nav a[href^="#"]').click(function (event) {
+    var id = $(this).attr("href");
+    var offset = 0;
+    var target = $(id).offset().top - offset;
+    $('html, body').animate({scrollTop:target}, 1000);
+    event.preventDefault();
+    return false;
+  });
 
   // JSONデータを引っ張ってくる
   $.getJSON("./json/data.json", function(data) {

@@ -56,19 +56,6 @@ textarea {
 }
 
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
-body {
-  font: 16px/26px Helvetica, Helvetica Neue, Arial;
-}
-
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -82,10 +69,10 @@ body {
 
 #wrapper {
   width: 80%;
-  max-width: 1000px;
+  max-width: 980px;
   border: 3px solid #139ae8;
   margin: 10px auto;
-  padding: 10px 5%;
+  padding: 10px;
 }
 
 /* Header */
@@ -325,7 +312,8 @@ div.authors a {
   }
   div.cards {
     width: 45%;
-    margin: 20px 2%;
+    box-sizing: border-box;
+    margin: 20px 2.5%;
   }
   .left {
     float: left;
