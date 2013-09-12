@@ -22,7 +22,13 @@ $(document).ready(function() {
     $.each(data, function(i) {
       number_of_cards = i;
       var card_id = 'div#card' + i;
-      $('#works').append('<div class="cards" id="card' + i + '"></div>');
+      var float_class = '';
+      if (i%2==0) {
+        float_class = 'left';
+      } else {
+        float_class = 'right';
+      }
+      $('div#card_wrapper').append('<div class="cards '+ float_class + '" id="card' + i + '"></div>');
 
       $(card_id).append('<div class="thumb"></div>').append('<div class="detail" style="display: none;"></div>');
 
@@ -37,7 +43,7 @@ $(document).ready(function() {
       // イメージの1枚目
       '<img src="./img/works/' + title_image + '.jpg">').append(
       // タイトル
-      '<div class="title"><h3>' + this.title + '</h3></div>');
+      '<div class="title"><h2>' + this.title + '</h2></div>');
 
       // 詳細要素
       $(card_id + ' > div.detail').append(
@@ -49,7 +55,7 @@ $(document).ready(function() {
       var title_image_length = this.title_image.length;
       if (title_image_length > 1)
         image_text = 'Images';
-      $(card_id + ' > div.detail').append('<div class="images"><h4>' + image_text + '</h4><ul class="clearfix"></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="images"><h3>' + image_text + '</h3><ul class="clearfix"></ul></div>');
 
       for (var l = 0; l < title_image_length; l++) {
         var append_text;
@@ -67,7 +73,7 @@ $(document).ready(function() {
       var author_text = 'Author';
       if (this.author.length > 1)
         author_text = 'Authors';
-      $(card_id + ' > div.detail').append('<div class="authors"><h4>' + author_text + '</h4><ul class="clearfix"></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="authors"><h3>' + author_text + '</h3><ul class="clearfix"></ul></div>');
 
       // 作者の数だけループ
       for (var k in this.author) {

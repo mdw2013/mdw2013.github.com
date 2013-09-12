@@ -153,19 +153,23 @@ nav li a:hover {
 #poem {
   text-align: center;
   font-size: 18px;
-  line-height: 45px;
   margin: auto;
-  width: 60%;
-}
+  width: 80%;
+  line-height: 36px;
 
+}
 
 /* cards style */
 
+div#card_wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
 div.cards {
   position: relative;
-  top: 250px;
+  top: 350px;
   width: 90%;
-  max-width: 400px;
   margin: 20px auto;
   padding: 0;
   background: #fff;
@@ -206,14 +210,16 @@ div.title {
   position: absolute;
   top: 0;
   left: 0;
-  /*background: rgba(256, 256, 256, .9);*/
+  /*background: rgba(256, 256, 256, .8);*/
   background: rgba(19, 154, 232, .8);
+  /*color: #888;*/
+  color: #fff;
 }
 
-div.title h3 {
+div.title h2 {
   margin: 10px 20px;
   /*color: #139ae8;*/
-  color: #fff;
+  /*color: #fff;*/
 }
 
 
@@ -221,7 +227,7 @@ div.detail {
   margin: 0 20px;
 }
 
-div.detail h4 {
+div.detail h3 {
   margin: 0;
 }
 
@@ -300,20 +306,38 @@ div.authors a {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (min-width: 480px) {
+/* mobile style */
 
-@media only screen and (max-width: 768px) {
-/* Tablet style */
-  #wrapper {
-  }
-
-  #poem {
-    width: 80%;
-    line-height: 36px;
-  }
+  
+  
 }
 
-@media only screen and (max-width: 480px) {
-/* mobile style */
+@media only screen and (min-width: 768px) {
+  
+  #poem {
+    width: 60%;
+    line-height: 45px;
+  }
+  
+  div#card_wrapper {
+    max-width: 1000px;
+  }
+  div.cards {
+    width: 45%;
+    margin: 20px 2%;
+  }
+  .left {
+    float: left;
+    /*margin-left: 3%;
+    margin-right: 2%;*/
+  }
+  .right {
+    float: right;
+    /*margin-right: 3%;
+    margin-left: 2%;*/
+  }
+  
 }
 
 /* ==========================================================================
