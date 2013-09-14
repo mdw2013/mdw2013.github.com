@@ -6,7 +6,8 @@ $(document).ready(function() {
   // カルーセル
   $("#carousel").owlCarousel({
       slideSpeed : 300,
-      paginationSpeed : 400,
+      paginationSpeed : 1000,
+      autoPlay : true,
  
       items : 1,
       itemsDesktop : false,
@@ -32,18 +33,14 @@ $(document).ready(function() {
     $.each(data, function(i) {
       number_of_cards = i;
       var card_id = 'div#card' + i;
-      var float_class = '';
-      if (i%2==0) {
-        float_class = 'left';
-      } else {
-        float_class = 'right';
-      }
-      $('div#card_wrapper').append('<div class="cards '+ float_class + '" id="card' + i + '"></div>');
+      $('div#card_wrapper').append('<div class="cards" id="card' + i + '"></div>');
 
       $(card_id).append('<div class="thumb"></div>').append('<div class="detail" style="display: none;"></div>');
-
+      
+      var dir = './img/works/' + this.dir + '/';
+      
       // 画像ファイル名の配列を作り、指定のない場合はno_imageの画像を指定する
-      var title_image = this.title_image[0];
+      var title_image = this.main;
       if (title_image == '') {
         title_image = 'no_image';
       }
@@ -51,7 +48,7 @@ $(document).ready(function() {
       // サムネ要素
       $(card_id + ' > div.thumb').append(
       // イメージの1枚目
-      '<img src="./img/works/' + title_image + '.jpg">').append(
+      '<img src="' + dir + title_image + '.jpg">').append(
       // タイトル
       '<div class="title"><h2>' + this.title + '</h2></div>');
 
@@ -62,41 +59,35 @@ $(document).ready(function() {
 
       // 画 像 の d i v
       var image_text = 'Image';
-      var title_image_length = this.title_image.length;
+      var title_image_length = this.img;
       if (title_image_length > 1)
         image_text = 'Images';
-      $(card_id + ' > div.detail').append('<div class="images"><h3>' + image_text + '</h3><ul class="clearfix"></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="images"><h3>' + image_text + '</h3><ul></ul></div>');
 
       for (var l = 0; l < title_image_length; l++) {
-        var append_text;
-        if (this.title_image[l] != '') {
-          append_text = '<a href="./img/works/' + this.title_image[l] + '.jpg" data-lightbox="' + i + '"><img src="./img/works/' + this.title_image[l] + '.jpg"></a>';
-        } else {
-          append_text = '<img src="./img/works/no_image.jpg">';
-        }
         $(card_id + ' > div.detail > div.images > ul').append(
         // 画像サムネイル
-        '<li>' + append_text + '</li>');
+        '<li><a href="' + dir + 'img' + l + '.jpg" data-lightbox="' + i + '"><img src="' + dir + 'img' + l + '_thumb.jpg"></a></li>');
       }
 
       // 作 者 の d i v
       var author_text = 'Author';
       if (this.author.length > 1)
         author_text = 'Authors';
-      $(card_id + ' > div.detail').append('<div class="authors"><h3>' + author_text + '</h3><ul class="clearfix"></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="authors"><h3>' + author_text + '</h3><ul></ul></div>');
 
       // 作者の数だけループ
       for (var k in this.author) {
         // 画像ファイル名の変数を作り、指定のない場合はno_iconの画像を指定する
         var icon;
         if (this.author[k].icon != '') {
-          icon = this.author[k].icon;
+          icon = dir + 'icon_' + this.author[k].icon;
         } else {
-          icon = 'no_icon';
+          icon = './img/works/no_icon';
         }
 
         // 作者の要素を作る
-        var author_text = '<img src="./img/works/' + icon + '.jpg"><p>' + this.author[k].name + '</p>';
+        var author_text = '<img src="' + icon + '.jpg"><p>' + this.author[k].name + '</p>';
 
         // URLの指定があればaタグで括る
         if (this.author[k].url != '') {
@@ -130,7 +121,7 @@ $(document).ready(function() {
   });
 
   // カードがクリックされた時の処理
-  $('#works').on('click', "div.cards", function() {
+  $('#card_wrapper').on('click', "div.cards", function() {
     var id = 'div#' + $(this).attr('id');
     if (showing_card_id != false && showing_card_id != id) {
       $(showing_card_id).css({

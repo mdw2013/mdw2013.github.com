@@ -68,11 +68,11 @@ body {
 }
 
 #wrapper {
-  width: 80%;
+  width: 95%;
   max-width: 980px;
-  border: 3px solid #139ae8;
-  margin: 10px auto;
-  padding: 10px;
+  border: 3px solid #00afff;
+  margin: 5px auto;
+  padding: 5px;
 }
 
 /* Header */
@@ -87,38 +87,39 @@ nav {
 }
 
 nav ul {
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style:none;
+  display: table;
 }
 
 nav li{
   margin: 0;
   padding: 0;
-  float: left;
-  width: 33.3333%;
-  text-align: center;
+  width: 25%;
+  display: table-cell;
 }
 
 nav li a {
   display: block;
-  border-left: 3px solid #139ae8;
-  border-top: 3px solid #139ae8;
-  border-bottom: 3px solid #139ae8;
+  border-left: 3px solid #00afff;
+  border-top: 3px solid #00afff;
+  border-bottom: 3px solid #00afff;
   padding: 8px;
   text-decoration: none;
-  color: #139ae8;
+  color: #00afff;
   margin: 1px 0;
   text-align: center;
   font-size: 22px;
 }
 
 nav li:last-child a {
-  border: 3px solid #139ae8;
+  border: 3px solid #00afff;
 }
 
 nav li a:hover {
-  background: #139ae8;
+  background: #00afff;
   color: #fff;
 }
 
@@ -130,7 +131,7 @@ nav li a:hover {
 
 #main h1 {
   background: #81d2f3;
-  border: 3px solid #139ae8;
+  border: 3px solid #00afff;
   color: #fff;
   font-weight: normal;
   font-size: 22px;
@@ -142,8 +143,8 @@ nav li a:hover {
   font-size: 18px;
   margin: auto;
   width: 80%;
+  max-width: 690px;
   line-height: 36px;
-
 }
 
 /* cards style */
@@ -152,6 +153,15 @@ div#card_wrapper {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: box;
+  display: -webkit-flexbox;
+  display: flexbox;
+  display: -webkit-flex;
+  display: flex;
+  box-lines: multiple;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 div.cards {
   position: relative;
@@ -160,9 +170,9 @@ div.cards {
   margin: 20px auto;
   padding: 0;
   background: #fff;
-  color: #139ae8;
+  color: #00afff;
   cursor: pointer;
-  border: 3px solid #139ae8;
+  border: 3px solid #00afff;
   /*
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -205,7 +215,7 @@ div.title {
 
 div.title h2 {
   margin: 10px 20px;
-  /*color: #139ae8;*/
+  /*color: #00afff;*/
   /*color: #fff;*/
 }
 
@@ -231,17 +241,31 @@ div.images {
   margin-top: 20px;
 }
 
-div.images ul {
+div.images ul,
+div.authors ul {
+  display: -webkit-box;
+  display: box;
+  display: -webkit-flexbox;
+  display: flexbox;
+  display: -webkit-flex;
+  display: flex;
+  box-lines: multiple;
+  flex-wrap: wrap;
 }
 
-div.images li {
-  width: 40%;
-  float: left;
-  margin-right: 10px;
+div.images li,
+div.authors li {
+  width: 30%;
+  margin-right: 5%;
   margin-bottom: 10px;
 }
+div.images li:last-child,
+div.authors li:last-child {
+  margin-right: 0;
+}
 
-div.images img {
+div.images img,
+div.authors img {
   width: 100%;
 }
 
@@ -252,21 +276,10 @@ div.authors {
 div.authors ul {
 }
 
-div.authors li {
-  width: 30%;
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-div.authors img {
-  width: 100%;
-}
-
 div.authors p {
   margin: 0;
   text-align: center;
-  color: #139ae8;
+  color: #00afff;
 }
 
 div.authors a {
@@ -278,7 +291,6 @@ div.authors a {
 #copyright {
   margin: auto;
   text-align: center;
-  font-size: 12px;
 }
 
 
@@ -301,9 +313,12 @@ div.authors a {
 }
 
 @media only screen and (min-width: 768px) {
-  
+  #wrapper {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+  }
   #poem {
-    width: 60%;
     line-height: 45px;
   }
   
@@ -314,16 +329,6 @@ div.authors a {
     width: 45%;
     box-sizing: border-box;
     margin: 20px 2.5%;
-  }
-  .left {
-    float: left;
-    /*margin-left: 3%;
-    margin-right: 2%;*/
-  }
-  .right {
-    float: right;
-    /*margin-right: 3%;
-    margin-left: 2%;*/
   }
   
 }
