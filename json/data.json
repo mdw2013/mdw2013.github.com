@@ -42,17 +42,12 @@
   "title_caption": "きゃぷしょんです",
   "dir": "3d_game",
   "main": "main",
-  "img": "5",
+  "img": "1",
   "author":[
     {
     "name": "ねお",
     "url": "//neoneobeam.com",
     "icon": "neo"
-    },
-    {
-    "name": "えびふらい",
-    "url": "//twitter.com/ebi_roop",
-    "icon": "ebi"
     }
   ]
   },
