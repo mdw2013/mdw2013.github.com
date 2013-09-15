@@ -104,7 +104,7 @@ $(document).ready(function() {
   // カードを表示するアニメーション
   function checkScroll(p_card_id) {
     if (p_card_id <= number_of_cards && p_card_id == animate_card_id) {
-      if ($(window).scrollTop() + $(window).height() + 100 > $('#card' + p_card_id).offset().top) {
+      if ($(window).scrollTop() + $(window).height() - $('#card' + p_card_id).height() > $('#card' + p_card_id).offset().top - 500) {
         animate_card_id = p_card_id + 1;
         $('#card' + p_card_id).animate({
           'top' : 0
