@@ -91,25 +91,27 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style:none;
-  display: table;
+  /*display: table;*/
 }
 
 nav li{
   margin: 0;
   padding: 0;
-  width: 25%;
-  display: table-cell;
+  width: 100%;
+/*  width: 25%;*/
+/*  display: table-cell;*/
 }
 
 nav li a {
   display: block;
   border-left: 3px solid #00afff;
+  border-right: 3px solid #00afff;
   border-top: 3px solid #00afff;
-  border-bottom: 3px solid #00afff;
+/*  border-bottom: 3px solid #00afff;*/
   padding: 8px;
   text-decoration: none;
   color: #00afff;
-  margin: 1px 0;
+/*  margin: 1px 0;*/
   text-align: center;
   font-size: 22px;
 }
@@ -161,15 +163,18 @@ div#card_wrapper {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
+  /*
   display: -webkit-box;
   display: box;
   display: -webkit-flexbox;
+  display: -ms-flexbox;
   display: flexbox;
   display: -webkit-flex;
   display: flex;
   box-lines: multiple;
   flex-wrap: wrap;
   align-items: flex-start;
+  */
 }
 div.cards {
   position: relative;
@@ -180,12 +185,6 @@ div.cards {
   background: #fff;
   color: #00afff;
   border: 3px solid #00afff;
-  /*
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  */
-  
 }
 
 div.thumb {
@@ -195,11 +194,6 @@ div.thumb {
 
 div.thumb img {
   width: 100%;
-  /*
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  */
 }
 
 div.title {
@@ -236,37 +230,34 @@ div.showing div.tri {
   border-color: transparent;
   border-bottom-color: #00afff;
 }
-div.showing div.tri.transitioning, div.tri.transitioning {
+div.showing div.tri.transitioning {
   border-color: transparent;
   border-right-color: #00afff;
+}
+div.tri.transitioning {
+  border-color: transparent;
   border-left-color: #00afff;
 }
-
-
 
 div.detail {
   margin: 0 20px;
 }
-
 div.detail h3 {
   margin: 0;
 }
-
 div.detail ul {
   padding: 0;
   margin: 0;
 }
-
 div.detail ul li {
   list-style-type: none;
 }
-
 div.images {
   margin-top: 20px;
 }
-
 div.images ul,
 div.authors ul {
+  /*
   display: -webkit-box;
   display: box;
   display: -webkit-flexbox;
@@ -275,6 +266,7 @@ div.authors ul {
   display: flex;
   box-lines: multiple;
   flex-wrap: wrap;
+  */
 }
 
 div.images li,
@@ -282,9 +274,12 @@ div.authors li {
   width: 30%;
   margin-right: 5%;
   margin-bottom: 10px;
+  float: left;
 }
-div.images li:last-child,
-div.authors li:last-child {
+div.images li:nth-child(3),
+div.images li:nth-child(6),
+div.authors li:nth-child(3),
+div.authors li:nth-child(6) {
   margin-right: 0;
 }
 
@@ -330,9 +325,18 @@ div.authors a {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 480px) {
-/* mobile style */
-
-  
+  nav ul {
+    display: table;
+  }
+  nav li{
+    width: 25%;
+    display: table-cell;
+  }
+  nav li a {
+    border-right: none;
+    border-bottom: 3px solid #00afff;
+    margin: 1px 0;
+  }
   
 }
 
@@ -353,6 +357,7 @@ div.authors a {
     width: 45%;
     box-sizing: border-box;
     margin: 20px 2.5%;
+    float: left;
   }
   
   div.cards.showing {

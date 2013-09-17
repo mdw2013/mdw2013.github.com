@@ -68,7 +68,7 @@ $(document).ready(function() {
       var title_image_length = this.img;
       if (title_image_length > 1)
         image_text = 'Images';
-      $(card_id + ' > div.detail').append('<div class="images"><h3>' + image_text + '</h3><ul></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="images"><h3>' + image_text + '</h3><ul class="clearfix"></ul></div>');
 
       for (var l = 0; l < title_image_length; l++) {
         $(card_id + ' > div.detail > div.images > ul').append(
@@ -80,7 +80,7 @@ $(document).ready(function() {
       var author_text = 'Author';
       if (this.author.length > 1)
         author_text = 'Authors';
-      $(card_id + ' > div.detail').append('<div class="authors"><h3>' + author_text + '</h3><ul></ul></div>');
+      $(card_id + ' > div.detail').append('<div class="authors"><h3>' + author_text + '</h3><ul class="clearfix"></ul></div>');
 
       // 作者の数だけループ
       for (var k in this.author) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
   // カードを表示するアニメーション
   function checkScroll(p_card_id) {
     if (p_card_id <= number_of_cards && p_card_id == animate_card_id) {
-      if ($(window).scrollTop() + $(window).height() - $('#card' + p_card_id).height() > $('#card' + p_card_id).offset().top - 500) {
+      if ($(window).scrollTop() + $(window).height() - ($('#card' + p_card_id).height()/2) > $('#card' + p_card_id).offset().top - 500) {
         animate_card_id = p_card_id + 1;
         $('#card' + p_card_id).animate({
           'top' : 0
