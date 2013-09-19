@@ -15,6 +15,11 @@ $(document).ready(function() {
       itemsMobile : false
   });
   
+  // ランダムで集合写真を入れ替える
+  if (Math.floor(Math.random()*2) == 1) {
+    $('#group_photo>img').attr('src', 'img/owl-carousel/photo2.jpg');
+  }
+  
   // スムーススクロール
   $('nav a[href^="#"]').on('click', function() {
     var id = $(this).attr("href");
@@ -37,7 +42,7 @@ $(document).ready(function() {
     $.each(data, function(i) {
       number_of_cards = i;
       var card_id = 'div#card' + i;
-      $('div#card_wrapper').append('<div class="cards" id="card' + i + '"></div>');
+      $('div#card_wrapper').append('<div class="cards clearfix" id="card' + i + '"></div>');
 
       $(card_id).append('<div class="thumb"></div>').append('<div class="detail" style="display: none;"></div>');
       

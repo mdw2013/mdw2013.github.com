@@ -144,7 +144,7 @@ nav li a:hover {
   text-align: center;
   font-size: 18px;
   margin: auto;
-  width: 80%;
+  width: 90%;
   max-width: 690px;
   line-height: 36px;
 }
@@ -306,7 +306,22 @@ div.authors a {
 }
 
 
+/* INFO */
+
+
+/* LINKS */
+#links li {
+  margin: 10px;
+}
+#links li a {
+  text-decoration: none;
+  color: #00afff;
+}
+
 /* Footer */
+#share {
+  text-align: right;
+}
 #copyright {
   margin: auto;
   text-align: center;
@@ -356,14 +371,23 @@ div.authors a {
   div.cards {
     width: 45%;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     margin: 20px 2.5%;
     float: left;
   }
-  
+  /*
   div.cards.showing {
-    
+    width: 95%;
   }
-  
+  div.cards.showing div.thumb {
+    width: 45%;
+    float: left;
+  }
+  div.detail {
+    width: 45%;
+    float: right;
+  }
+  */
 }
 
 /* ==========================================================================
