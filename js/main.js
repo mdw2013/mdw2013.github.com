@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
   
   // ランダムで集合写真を入れ替える
-  if (Math.floor(Math.random()*2) == 1) {
+  if (Math.floor(Math.random()*2) == 0) {
     $('#group_photo>img').attr('src', 'img/owl-carousel/photo2.jpg');
   }
   
@@ -49,15 +49,15 @@ $(document).ready(function() {
       var dir = './img/works/' + this.dir + '/';
       
       // 画像ファイル名の配列を作り、指定のない場合はno_imageの画像を指定する
-      var title_image = this.main;
-      if (title_image == '') {
-        title_image = 'no_image';
+      var title_image = dir + this.main;
+      if (this.main == '') {
+        title_image = './img/works/no_image';
       }
 
       // サムネ要素
       $(card_id + ' > div.thumb').append(
         // イメージの1枚目
-        '<img src="' + dir + title_image + '.jpg">').append(
+        '<img src="' + title_image + '.jpg">').append(
         // タイトル
         '<div class="title"><h2>' + this.title + '</h2></div>').append(
         // 三角
