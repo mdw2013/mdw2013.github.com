@@ -17,7 +17,7 @@ $(document).ready(function() {
   
   // ランダムで集合写真を入れ替える
   if (Math.floor(Math.random()*2) == 0) {
-    $('#group_photo>img').attr('src', 'img/owl-carousel/photo2.jpg');
+    $('#group_photo>img').attr('src', 'img/owl-carousel/photo0_1.jpg');
   }
   
   // スムーススクロール
@@ -34,9 +34,9 @@ $(document).ready(function() {
   $('div.back2top a[href^="#"]').on('click', function() {
     $('html, body').animate({scrollTop: 0}, 1000);
   });
-
+/*
   // JSONデータを引っ張ってくる
-  $.getJSON("./json/data.json", function(data) {
+  $.getJSON("json/data.json", function(data) {
 
     // dataの数だけループ
     $.each(data, function(i) {
@@ -46,12 +46,12 @@ $(document).ready(function() {
 
       $(card_id).append('<div class="thumb"></div>').append('<div class="detail" style="display: none;"></div>');
       
-      var dir = './img/works/' + this.dir + '/';
+      var dir = 'img/works/' + this.dir + '/';
       
       // 画像ファイル名の配列を作り、指定のない場合はno_imageの画像を指定する
       var title_image = dir + this.main;
       if (this.main == '') {
-        title_image = './img/works/no_image';
+        title_image = 'img/works/no_image';
       }
 
       // サムネ要素
@@ -94,7 +94,7 @@ $(document).ready(function() {
         if (this.author[k].icon != '') {
           icon = dir + 'icon_' + this.author[k].icon;
         } else {
-          icon = './img/works/no_icon';
+          icon = 'img/works/no_icon';
         }
 
         // 作者の要素を作る
@@ -147,5 +147,5 @@ $(document).ready(function() {
     });
     
   });
-
+*/
 });

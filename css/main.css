@@ -305,6 +305,10 @@ div.authors a {
   text-decoration: none;
 }
 
+#works p {
+  margin: 10px 5%;
+}
+
 
 /* INFO */
 #summary, #access {
@@ -324,6 +328,12 @@ div.authors a {
 /* Footer */
 #share {
   text-align: right;
+}
+#share iframe.twitter-share-button {
+  width: 90px!important;
+}
+#share #___plusone_0 {
+  width: 60px!important;
 }
 #copyright {
   margin: auto;
