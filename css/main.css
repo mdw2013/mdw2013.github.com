@@ -146,7 +146,7 @@ nav li a:hover {
   margin: auto;
   width: 90%;
   max-width: 690px;
-  line-height: 26px;
+  line-height: 32px;
 }
 
 .back2top {
@@ -248,9 +248,9 @@ div.detail h3 {
 div.detail ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 div.detail ul li {
-  list-style-type: none;
 }
 div.images {
   margin-top: 20px;
@@ -315,6 +315,17 @@ div.authors a {
   width: 90%;
   margin: 0 auto;
 }
+#summary {
+  margin-bottom: 30px;
+}
+
+#info h2 {
+  font-size: 20px;
+}
+#info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
 /* LINKS */
 #links li {
@@ -329,12 +340,13 @@ div.authors a {
 #share {
   text-align: right;
 }
+/*
 #share iframe.twitter-share-button {
   width: 90px!important;
 }
 #share #___plusone_0 {
   width: 60px!important;
-}
+}*/
 #copyright {
   margin: auto;
   text-align: center;
@@ -375,7 +387,6 @@ div.authors a {
     padding: 10px;
   }
   #poem {
-    line-height: 45px;
   }
   
   div#card_wrapper {
