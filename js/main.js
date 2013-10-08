@@ -34,7 +34,7 @@ $(document).ready(function() {
   $('div.back2top a[href^="#"]').on('click', function() {
     $('html, body').animate({scrollTop: 0}, 1000);
   });
-/*
+
   // JSONデータを引っ張ってくる
   $.getJSON("json/data.json", function(data) {
 
@@ -147,5 +147,9 @@ $(document).ready(function() {
     });
     
   });
-*/
+  
+  function kawata() {
+    
+  }
+
 });

@@ -306,7 +306,8 @@ div.authors a {
 }
 
 #works p {
-  margin: 10px 5%;
+  margin: 10px 5px;
+  line-height: 1.5em;
 }
 
 

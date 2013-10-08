@@ -1,29 +1,24 @@
 [
 	{
-	"title": "3Dゲーム",
-	"title_caption": "Kinectで3Dなゲームです。進捗ダメです。",
-	"dir": "3d_game",
+	"title": "夢渡りの夜",
+	"title_caption": "創作同人のwebサイトと、インタラクティブ要素を含んだ自作小説を公開しています。魔法と恋と、魔女の物語。",
+	"dir": "yumewatarinoyoru",
 	"main": "main",
-	"img": "2",
+	"img": "1",
 	"author":[
 		{
-		"name": "ねお",
-		"url": "//neoneobeam.com",
-		"icon": "neo"
-		},
-		{
-    "name": "えびふらい",
-    "url": "//twitter.com/ebi_roop",
-    "icon": "ebi"
-    }
+		"name": "保坂千晶(ゆゆき)",
+		"url": "//knbyuyuki.tumblr.com",
+		"icon": "hosakaChiaki"
+		}
 	]
 	},
-	{
-  "title": "たいとる",
-  "title_caption": "きゃぷしょんです",
-  "dir": "3d_game",
+  {
+  "title": "instratum(仮) 超先行体験版",
+  "title_caption": "Android向け「サイバーパンク3Dシューティングアクション」ゲームの先行体験版を展示します。モバイルにおける3DゲームのUIや、世界観を再現するモデルにこだわって鋭意制作中のゲームです。ぜひお手にとって体験プレイしていただければと思います。",
+  "dir": "instratum",
   "main": "main",
-  "img": "5",
+  "img": "0",
   "author":[
     {
     "name": "ねお",
@@ -32,16 +27,44 @@
     },
     {
     "name": "えびふらい",
-    "url": "//twitter.com/ebi_roop",
+    "url": "",
     "icon": "ebi"
+    }
+    ]
+  },
+  {
+  "title": "pv",
+  "title_caption": "pv（予定）",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "辻蒔菜",
+    "url": "",
+    "icon": ""
     }
   ]
   },
   {
-  "title": "たいとる3",
-  "title_caption": "きゃぷしょんです",
-  "dir": "3d_game",
-  "main": "",
+  "title": "between the lines",
+  "title_caption": "読まれることを前提とした詩や小説に、映像と音声を組み合わせ、さらに身振りによって働きかけることができる形に再構成したものを展示します。<br>映像と文字、音声といった異なる形態のメディアの境界を探る試みです。",
+  "dir": "between_the_lines",
+  "main": "main",
+  "img": "0",
+  "author":[
+    {
+    "name": "浜田祥太 (まく)",
+    "url": "//maku693.net",
+    "icon": "maku"
+    }
+    ]
+  },
+  {
+  "title": "出席管理4クズ",
+  "title_caption": "時間割アプリの常識を覆す、Android用アプリ「出席管理4クズ」。プロのクズは常にギリギリを攻め続ける。授業をサボり、クズレベルを上げてトップランカーに挑め！<br><a href=\"//play.google.com/store/apps/details?id=com.neoneobeam.s4k\" target=\"_blank\">Google play で手に入れよう</a><br><a href=\"//twitter.com/search?q=%23%E5%87%BA%E5%B8%AD%E7%AE%A1%E7%90%864%E3%82%AF%E3%82%BA&src=hash&f=realtime\" target=\"_blank\">Twitterで「#出席管理4クズ」を検索！</a>",
+  "dir": "s4k",
+  "main": "main",
   "img": "0",
   "author":[
     {
@@ -52,40 +75,283 @@
   ]
   },
   {
-  "title": "たいとる4",
-  "title_caption": "きゃぷしょんです",
-  "dir": "3d_game",
-  "main": "",
+  "title": "DANMAKU/Duo -Final-",
+  "title_caption": "身体を動かしてプレイする、新感覚弾幕シューティングゲーム。この展示場でしか体験できません！<br>Direction&Program ねお<br>Graphic 江川法人 猛進ドイ<br>Voice 抹茶ひばり",
+  "dir": "danmaku-duo",
+  "main": "main",
   "img": "0",
   "author":[
     {
-    "name": "ねお",
-    "url": "//neoneobeam.com",
-    "icon": "neo"
-    },
-    {
-    "name": "えびふらい",
-    "url": "//twitter.com/ebi_roop",
-    "icon": "ebi"
+    "name": "Project DANMAKU/Duo",
+    "url": "",
+    "icon": ""
     }
   ]
   },
   {
-  "title": "たいとる5",
-  "title_caption": "きゃぷしょんです",
-  "dir": "3d_game",
+  "title": "過美税dfnk",
+  "title_caption": "過美税とは美男子が納める所得税、消費税に並ぶ三税の一つです。今回、まだあまり世間に知られていない過美税のことをみんなにわかりやすく説明するため、僕が実際に捕縛した脱税者の逮捕→裁判→投獄までのプロセスをwebサイトにしました。",
+  "dir": "kuroki",
+  "main": "main",
+  "img": "6",
+  "author":[
+    {
+    "name": "黒木慶典",
+    "url": "//heavybeautyz.com",
+    "icon": "kuroki"
+    }
+  ]
+  },
+  {
+  "title": "煙草怪人（仮）～ポイ捨てダメ絶対!!!～",
+  "title_caption": "煙草を吸うのはかまわない、ただ吸うのであれば人様に迷惑をかけてはならない。<br>近頃目立つマナー違反を正すMOVIE～煙草駄目絶対～",
+  "dir": "tabakokaizin",
+  "main": "main",
+  "img": "0",
+  "author":[
+    {
+    "name": "山根直彦",
+    "url": "",
+    "icon": "yamane"
+    },
+    {
+    "name": "佐久間渓矢",
+    "url": "",
+    "icon": "sakuma"
+    },
+    {
+    "name": "弓井隆太",
+    "url": "",
+    "icon": "yumii"
+    }
+  ]
+  },
+  {
+  "title": "ドットランナー",
+  "title_caption": "scratchで制作した、ペイントと遊びの要素を組み合わせたゲーム。10x10のドットのキャラクターを描き、その後描いた絵を活用し、操作して遊べるようになっている。",
+  "dir": "Dot_Runner",
+  "main": "main",
+  "img": "4",
+  "author":[
+    {
+    "name": "弓井隆太",
+    "url": "",
+    "icon": "Yumii"
+    }
+  ]
+  },
+  {
+  "title": "キジバトの下克上",
+  "title_caption": "キジバトがカラスに下克上を挑む、愉快なシューティングゲームです。",
+  "dir": "",
   "main": "",
   "img": "0",
   "author":[
     {
-    "name": "ねお",
-    "url": "//neoneobeam.com",
-    "icon": "neo"
+    "name": "長門",
+    "url": "",
+    "icon": ""
     },
     {
-    "name": "えびふらい",
-    "url": "//twitter.com/ebi_roop",
-    "icon": "ebi"
+    "name": "鳥越",
+    "url": "",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "Rainbow Blocks",
+  "title_caption": "心の成長が著しい子どもを対象に様々な模様や色の楽しさを感じてもらうことを目的とした玩具。<br>積み木として 遊べるだけでなく、積み木を重ねたり、組み合わせたりすることで色や模様の変化を楽しむことができる。",
+  "dir": "rainbowblocks",
+  "main": "main",
+  "img": "3",
+  "author":[
+    {
+    "name": "麻植久視子",
+    "url": "",
+    "icon": "oekumiko"
+    }
+  ]
+  },
+  {
+  "title": "どこでもおままごと",
+  "title_caption": "どこにでも手軽に持ち運べ、遊ぶことのできる子どものためのマグネット式おままごと。<br>おままごとを通して、人との関わりや生活マナー、想像力などを養うだけでなく、学習することの楽しさを感じてもらうことを目的としている。",
+  "dir": "dokodemo_omamagoto",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "麻植久視子",
+    "url": "",
+    "icon": "oekumiko"
+    }
+  ]
+  },
+  {
+  "title": "no title",
+  "title_caption": "",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "ハラユウスケ",
+    "url": "//yukkesoup.tumblr.com",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "popon.com",
+  "title_caption": "jQueryプラグインisotopeを利用した可変グリッドレイアウトのポートフォリオサイト。グラッフィックデザイン、WEB、自主制作など、約３年間の制作物を１つのWEBサイトにまとめました。",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "櫻井 香織",
+    "url": "",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": ".mov",
+  "title_caption": "人、空、気、間、音、質を映像にする。",
+  "dir": "kawata",
+  "main": "main",
+  "img": "1",
+  "author":[
+    {
+    "name": "河田大樹",
+    "url": "",
+    "icon": "kawata"
+    }
+  ]
+  },
+  {
+  "title": "ロマンティック恋うらない 魔法の香水びん",
+  "title_caption": "子どもたちが楽しめるコンテンツを目指したwebアプリケーションです。世代をこえて楽しんでいただける様に大人テイストも盛り込みました。<br>普通にうらない結果を表示するのではなく、中央下のハートボタンを押すと8色のビンが順番に光りルーレットが開始されます。もう一度ボタンを押すと、ルーレットが止まります。最後に光が止まった香水びんのうらない結果が、今日のおまじない結果として表示されるというかたちにしました。",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "内藤港都",
+    "url": "",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "レスポンシブWebデザインの実践",
+  "title_caption": "デバイスのサイズに合わせ、表示を最適化できるレスポンシブwebデザインをHTML5とCSS3を用いて制作。",
+  "dir": "rwd",
+  "main": "main",
+  "img": "1",
+  "author":[
+    {
+    "name": "神部ひかり",
+    "url": "",
+    "icon": "kanbehikari"
+    }
+  ]
+  },
+  {
+  "title": "未定",
+  "title_caption": "授業内で作ったものを少しだけ手直ししてみました。",
+  "dir": "kitajima",
+  "main": "main",
+  "img": "2",
+  "author":[
+    {
+    "name": "にじうさぎ",
+    "url": "//twitter.com/monocore711",
+    "icon": "kitajima"
+    }
+  ]
+  },
+  {
+  "title": "ALLOY WAR",
+  "title_caption": "",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "3Y's（三猥酢）",
+    "url": "",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "VegetablesGreens",
+  "title_caption": "食生活において欠かせない「野菜」について探索し追及した作品。",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "永島由佳",
+    "url": "//ynonpu.tumblr.com",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "FilterTester",
+  "title_caption": "趣味で作った写真加工フィルターを携帯アプリケーション風にアレンジしてみました。",
+  "dir": "FilterTester",
+  "main": "main",
+  "img": "1",
+  "author":[
+    {
+    "name": "長尾桜子",
+    "url": "",
+    "icon": "SakurakoNagao"
+    }
+  ]
+  },
+  {
+  "title": "八王子サウンドマップ",
+  "title_caption": "八王子の風景を音から見てみます。もしかしたら素敵なものが見つかるかもしれない！授業での資料をヒントにした、単純な実践です。進捗ダメです。",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "野田寛子",
+    "url": "",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "ともしごろ",
+  "title_caption": "",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "飯塚理恵子",
+    "url": "",
+    "icon": ""
+    }
+  ]
+  },
+  {
+  "title": "",
+  "title_caption": "",
+  "dir": "",
+  "main": "",
+  "img": "0",
+  "author":[
+    {
+    "name": "",
+    "url": "",
+    "icon": ""
     }
   ]
   }
