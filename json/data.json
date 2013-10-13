@@ -204,14 +204,14 @@
   {
   "title": "popon.com",
   "title_caption": "jQueryプラグインisotopeを利用した可変グリッドレイアウトのポートフォリオサイト。グラッフィックデザイン、WEB、自主制作など、約３年間の制作物を１つのWEBサイトにまとめました。",
-  "dir": "",
-  "main": "",
-  "img": "0",
+  "dir": "poponcom",
+  "main": "main",
+  "img": "2",
   "author":[
     {
     "name": "櫻井 香織",
     "url": "",
-    "icon": ""
+    "icon": "sakuraikaori"
     }
   ]
   },
