@@ -113,6 +113,7 @@ $(document).ready(function() {
   });
 
   // カードを表示するアニメーション
+/*
   function checkScroll(p_card_id) {
     if (p_card_id <= number_of_cards && p_card_id == animate_card_id) {
       if ($(window).scrollTop() + $(window).height() - ($('#card' + p_card_id).height()/2) > $('#card' + p_card_id).offset().top - 500) {
@@ -125,7 +126,7 @@ $(document).ready(function() {
       }
     }
   }
-
+*/
   $(window).scroll(function() {
     checkScroll(animate_card_id);
   });
